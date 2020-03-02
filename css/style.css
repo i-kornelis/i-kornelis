@@ -1,0 +1,13 @@
+/* Clearfix */
+html {
+    overflow: auto;
+}
+
+.inner-content {
+    max-width: 920px;
+    margin: auto;
+}
+#about {
+    width: 100%;
+    background-image: image("");
+}
