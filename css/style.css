@@ -2,12 +2,108 @@
 html {
     overflow: auto;
 }
+#content {
+    margin-left: 200px;
+}
 
+/* Navigation */
+.logo {
+    display: block; 
+    width: 30%; 
+    height: auto; 
+    margin: auto;
+}
+
+nav {
+    font-family: 'Montserrat', "sans-serif";
+    font-weight: 600;
+    text-transform: uppercase;
+    
+}
+
+.sidebar {
+    background-color:#FFCE2B;
+    margin: 0em;
+    padding: 0;
+    width: 150px;
+    height:100%;
+    position: fixed;
+}
+
+.sidebar a{
+    display: block;
+    color: #42413D;
+    padding: 1em 0  1em 0;
+    text-decoration: none;
+}
+
+.sidebar ul{
+    list-style-type: disc;
+}
+
+.sidebar ul :hover, :active {
+    list-style-type: circle;
+}
 .inner-content {
     max-width: 920px;
     margin: auto;
 }
 #about {
-    width: 100%;
-    background-image: image("");
+    margin-left:  -50px;
+    width: 110%;
+    height: 600px;
+    background-image: url("../images/about.jpg");
+}
+
+/* small screen css */
+
+@media screen and (max-width: 700px) {
+    .logo {
+        float: left;
+        display: block; 
+        width: auto; 
+        height: 60px; 
+        margin: auto;
+        padding: 0;
+    }
+    nav {
+        background-color:#FFCE2B;
+        margin: auto;
+    }
+    .sidebar {
+        display: block;
+        width: 90%;
+        height: 100px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        margin: auto;
+        position: relative;
+    }
+    .sidebar a{
+        padding: 0; 
+    }
+
+    .sidebar ul{
+        display: block;
+
+        margin: auto;
+        list-style-type: none;
+        padding-left: 0px;
+    }
+
+    .sidebar li{
+        float: left;
+        text-align: center;
+        padding: 0 10px; 
+    }
+
+    
+    #content {
+        margin-left: 0;
+    }
+
+    #about {
+        margin-left: 0;
+        width: 100%;
+    }
 }
