@@ -1,9 +1,21 @@
 /* Clearfix */
+* {
+    box-sizing: border-box;
+}
+html, body, div, img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 html {
     overflow: auto;
+    font-family: 'Roboto', "sans-serif";
 }
 #content {
-    margin-left: 200px;
+    margin-left: 150px;
 }
 
 /* Navigation */
@@ -25,9 +37,11 @@ nav {
     background-color:#FFCE2B;
     margin: 0em;
     padding: 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
     width: 150px;
     height:100%;
     position: fixed;
+    z-index: 1100;
 }
 
 .sidebar a{
@@ -48,11 +62,110 @@ nav {
     max-width: 920px;
     margin: auto;
 }
+
+/* social */
+#social {
+    z-index:1000;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    width: auto;
+    align-content: right;
+    background-color: #FFCE2B;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+#social a {
+    display: block;
+    float: left;
+    padding: 16px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+#social a:hover {
+    background-color: #42413D;
+}
+
+/* About Section */
 #about {
-    margin-left:  -50px;
-    width: 110%;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
     height: 600px;
-    background-image: url("../images/about.jpg");
+    background-image: url("../images/about-bw.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#about-me {
+    margin-top: 400px;
+    padding: 0 10%;
+    width: 80%;
+
+}
+
+/* Skills Section */
+/* Timeline*/
+
+
+
+
+/* Skills*/
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    background-color: #42413D;
+    color: white;
+}
+* {box-sizing:border-box}
+
+.skill-bars {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    width: 40%;
+    margin: 1em;
+}
+
+.container {
+    width: 100%; /* Full width */
+    background-color: white; /* White background */
+  }
+
+.skill {
+    
+    text-align: left; /* Right-align text */
+    padding-left: 10px;
+    padding-top: 10px; /* Add top padding */
+    padding-bottom: 10px; /* Add bottom padding */
+    color: #42413D; /* White text color */
+  }
+  
+  .photoshop {width: 90%; background-color: #FFD23E;} 
+  .indesign {width: 90%; background-color: #FFD23E;} 
+  .illustrator {width: 80%; background-color: #FFD23E;} 
+  .html {width: 90%; background-color: #FFD23E;} 
+  .css {width: 80%; background-color: #FFD23E;} 
+  .js {width: 40%; background-color: #FFD23E;} 
+
+.yellow {
+    color: #FFCE2B;
+}
+
+/* Text */
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', "sans-serif";
+}
+
+p {
+    font-family: 'Roboto', "sans-serif";
 }
 
 /* small screen css */
@@ -63,7 +176,7 @@ nav {
         display: block; 
         width: auto; 
         height: 60px; 
-        margin: auto;
+        margin: 1em 0;
         padding: 0;
     }
     nav {
@@ -71,11 +184,13 @@ nav {
         margin: auto;
     }
     .sidebar {
-        display: block;
+        display: flex;
+        align-content: center;
         width: 90%;
         height: 100px;
         margin-top: 10%;
         margin-bottom: 10%;
+        box-shadow: none;
         margin: auto;
         position: relative;
     }
@@ -102,8 +217,32 @@ nav {
         margin-left: 0;
     }
 
+    /* social */
+#social {
+    visibility: hidden;
+}
+/* About Section */
     #about {
+        justify-content: center;
         margin-left: 0;
         width: 100%;
+        height: 350px;
+    }
+
+    #about-me {
+        margin-top: 20%;
+        width: 80%;
+    
+    }
+/* Skills Section */
+    #skills {
+        margin-left:  0;
+        width: 100%;
+        background-color: #42413D;
+        color: white;
+    }
+
+    .skill-bars {
+        width: 80%;
     }
 }
