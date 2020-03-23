@@ -92,8 +92,34 @@ nav {
     background-color: #42413D;
 }
 
-/* About Section */
-#about {
+/* scroll to top */
+#scroll {
+    z-index:1000;
+    position: fixed;
+    bottom: 0px;
+    right: 0;
+    width: auto;
+    align-content: right;
+    background-color: #FFCE2B;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.8);
+}
+
+#scroll a {
+    display: block;
+    float: left;
+    padding: 16px 16px 10px 16px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#scroll a:hover {
+    background-color: #42413D;
+}
+
+/* hero Section */
+#hero {
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -120,12 +146,9 @@ nav {
     width: 80%
 }
 
-/* Skills Section */
-/* Timeline*/
 
-
-/* Skills*/
-#skills {
+/* About Section */
+#about {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -133,6 +156,9 @@ nav {
     background-color: #42413D;
     color: white;
 }
+/* Skills Section */
+/* Timeline*/
+/* Skills*/
 * {box-sizing:border-box}
 
 .skill-bars {
@@ -150,20 +176,73 @@ nav {
   }
 
 .skill {
-    
     text-align: left; /* Right-align text */
     padding-left: 10px;
     padding-top: 10px; /* Add top padding */
     padding-bottom: 10px; /* Add bottom padding */
     color: #42413D; /* text color */
   }
-  
-  .photoshop {width: 90%; border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
-  .indesign {width: 90%;  border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
-  .illustrator {width: 80%;  border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
-  .html {width: 90%;  border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
-  .css {width: 80%;  border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
-  .js {width: 40%;  border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
+
+  .photoshop {width: 90%; animation: photoshop 3s; border-radius: 10px 0px 0px 10px; background-color: #FFD23E;}
+  .indesign {width: 90%; animation: indesign 3s; border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
+  .illustrator {width: 80%; animation: illustrator 3s; border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
+  .html {width: 90%; animation: html 3s; border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
+  .css {width: 80%; animation: css 3s; border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
+  .js {width: 40%; animation: js 3s; border-radius: 10px 0px 0px 10px; background-color: #FFD23E;} 
+
+  @keyframes photoshop {
+    0%{
+        width: 10%;
+      }
+    100%{
+        width: 90%;
+      }
+  }
+
+  @keyframes indesign {
+    0%{
+        width: 10%;
+      }
+    100%{
+        width: 90%;
+      }
+  }
+
+  @keyframes illustrator {
+    0%{
+        width: 10%;
+      }
+    100%{
+        width: 80%;
+      }
+  }
+
+  @keyframes html {
+    0%{
+        width: 10%;
+      }
+    100%{
+        width: 90%;
+      }
+  }
+
+  @keyframes css {
+    0%{
+        width: 10%;
+      }
+    100%{
+        width: 80%;
+      }
+  }
+
+  @keyframes js {
+    0%{
+        width: 10%;
+      }
+    100%{
+        width: 40%;
+      }
+  }
 
 .yellow {
     color: #FFCE2B;
@@ -210,8 +289,8 @@ nav {
     width: 100%;
     height: auto;
     margin-bottom: 4px;
-    color:#fff;
-    background-color: #42413D;
+    color:#42413D;
+    background-color: #FFCE2B;
     opacity: 0; 
     transition: .5s ease;
 }
@@ -255,45 +334,9 @@ video {
     width: 100%;
     margin-bottom: 2em;
 }
-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    margin: 1em 0em;
+#contact h2{
+    padding: 1.5em;
 }
-form input {
-    font-family: 'Roboto', "sans-serif";
-    font-size: 1em !important;
-    width: 35%;
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #B2AFAC;
-    border-radius: 10px;
-  }
-
-  /* Style the submit button */
-.btn {
-    cursor: pointer;
-    font-family: 'Roboto', "sans-serif";
-    font-size: 1em !important;
-    margin: 5px 10px 5px 0;
-    width: 20%;
-    padding: 10px 5%;
-    border: none;
-    background-color: #FFCE2B;
-    color: #42413D;
-    border-radius: 10px;
-  }
-  
- .btn:hover {
-    border: none;
-    background-color: #42413D;
-    color: white;
-    border-radius: 10px;
-  }
 
 /* Footer*/
 footer {
@@ -353,6 +396,16 @@ h1 {
 
 p {
     font-family: 'Roboto', "sans-serif";
+    line-height: 1.6;
+}
+
+.link {
+    text-decoration: none;
+    color: #FFCE2B;
+}
+
+.link :hover :active {
+    color: #42413D;
 }
 
 /* small screen css */
